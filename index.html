@@ -1,0 +1,2981 @@
+	<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>JS LENGE TECH SERVICES</title>
+
+<meta name="description"
+content="JS LENGE TECH SERVICES - Équipe internationale dédiée à la technologie, l'intelligence artificielle et l'innovation.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070b14;
+    color:#fff;
+    line-height:1.6;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,11,20,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #202b3e;
+}
+
+.nav{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#00d9ff;
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+}
+
+.menu a{
+    color:#aab5c7;
+    font-size:14px;
+}
+
+.menu a:hover{
+    color:#00d9ff;
+}
+
+.nav-actions{
+    display:flex;
+    gap:8px;
+}
+
+.btn{
+    border:0;
+    border-radius:10px;
+    padding:11px 17px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.primary{
+    background:#00d9ff;
+    color:#031018;
+}
+
+.dark-btn{
+    background:#172236;
+    color:#fff;
+}
+
+.danger{
+    background:#dc3545;
+    color:#fff;
+}
+
+.success{
+    background:#18b979;
+    color:#fff;
+}
+
+.hidden{
+    display:none!important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 20%,#12445d 0,transparent 35%),
+    radial-gradient(circle at 10% 80%,#14284b 0,transparent 35%),
+    #070b14;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    color:#00d9ff;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,75px);
+    line-height:1.03;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#00d9ff;
+}
+
+.hero p{
+    color:#a8b3c5;
+    font-size:18px;
+    max-width:700px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.hero-card{
+    background:#0d1523;
+    border:1px solid #25344a;
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.hero-card h3{
+    color:#00d9ff;
+    margin-bottom:15px;
+}
+
+.hero-card p{
+    font-size:15px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-top:25px;
+}
+
+.stat{
+    background:#111c2d;
+    padding:15px 8px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    font-size:24px;
+    color:#00d9ff;
+}
+
+.stat small{
+    color:#8290a5;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
+}
+
+.section-title small{
+    color:#00d9ff;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:clamp(32px,5vw,52px);
+    margin:10px 0 15px;
+}
+
+.section-title h2 span{
+    color:#00d9ff;
+}
+
+.section-title p{
+    color:#95a2b5;
+}
+
+/* ================= SERVICES ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    background:#0d1523;
+    border:1px solid #202e43;
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#00d9ff;
+}
+
+.icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#8f9bae;
+    font-size:14px;
+}
+
+/* ================= VISION ================= */
+
+.dark-section{
+    background:#0a101b;
+}
+
+.vision{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.vision h2{
+    font-size:clamp(35px,5vw,55px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.vision h2 span{
+    color:#00d9ff;
+}
+
+.vision p{
+    color:#96a3b6;
+    margin-bottom:15px;
+}
+
+.steps{
+    display:grid;
+    gap:12px;
+}
+
+.step{
+    display:flex;
+    gap:18px;
+    padding:20px;
+    background:#0d1523;
+    border:1px solid #233149;
+    border-radius:15px;
+}
+
+.step strong{
+    color:#00d9ff;
+    font-size:25px;
+}
+
+/* ================= MEMBERS ================= */
+
+.member-count{
+    text-align:center;
+    margin-bottom:25px;
+    color:#a4b0c1;
+}
+
+.member-count strong{
+    color:#00d9ff;
+}
+
+.members{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.member{
+    background:#0d1523;
+    border:1px solid #223148;
+    border-radius:17px;
+    padding:25px;
+    text-align:center;
+}
+
+.avatar{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#00d9ff;
+    color:#031018;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    font-size:25px;
+    font-weight:900;
+    overflow:hidden;
+}
+
+.avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.member .country{
+    color:#00d9ff;
+    font-size:13px;
+}
+
+.member .skill{
+    color:#8e9bae;
+    font-size:14px;
+    margin-top:8px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.project{
+    background:#0d1523;
+    border:1px solid #223148;
+    border-radius:18px;
+    padding:25px;
+}
+
+.project h3{
+    margin-bottom:10px;
+}
+
+.project p{
+    color:#919db0;
+    font-size:14px;
+}
+
+/* ================= JOIN ================= */
+
+.join{
+    text-align:center;
+    background:
+    radial-gradient(circle,#123c53 0,transparent 55%),
+    #08101a;
+}
+
+.join h2{
+    font-size:clamp(35px,6vw,60px);
+    margin-bottom:15px;
+}
+
+.join p{
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#9ba7b9;
+}
+
+/* ================= FORMS ================= */
+
+.form-box{
+    max-width:650px;
+    margin:auto;
+    background:#0d1523;
+    border:1px solid #233149;
+    border-radius:20px;
+    padding:30px;
+}
+
+.form-box h2{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin:14px 0 7px;
+    font-weight:700;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    background:#080e18;
+    color:#fff;
+    border:1px solid #2a394f;
+    border-radius:10px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#00d9ff;
+}
+
+textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+.form-box .btn{
+    margin-top:18px;
+    width:100%;
+}
+
+/* ================= APP ================= */
+
+.app{
+    padding:40px 0 80px;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:230px 1fr;
+    gap:20px;
+}
+
+.sidebar{
+    background:#0d1523;
+    border:1px solid #223148;
+    border-radius:17px;
+    padding:18px;
+    height:max-content;
+}
+
+.sidebar button{
+    width:100%;
+    text-align:left;
+    margin-bottom:8px;
+}
+
+.content-box{
+    background:#0d1523;
+    border:1px solid #223148;
+    border-radius:17px;
+    padding:25px;
+}
+
+.profile-head{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.profile-head .avatar{
+    margin:0;
+}
+
+/* ================= POSTS ================= */
+
+.post{
+    background:#111b2b;
+    border:1px solid #25344a;
+    border-radius:14px;
+    padding:18px;
+    margin-top:15px;
+}
+
+.post-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.post-top .avatar{
+    width:45px;
+    height:45px;
+    margin:0;
+    font-size:15px;
+}
+
+.post img{
+    max-width:100%;
+    max-height:350px;
+    border-radius:10px;
+    margin-top:15px;
+}
+
+.post p{
+    color:#b0bac9;
+    margin-top:10px;
+}
+
+/* ================= ADMIN ================= */
+
+.admin{
+    border:1px solid #71323a;
+    background:#130c10;
+}
+
+.admin h2{
+    color:#ff7784;
+}
+
+.admin-row{
+    background:#101a29;
+    border:1px solid #26364d;
+    border-radius:12px;
+    padding:15px;
+    margin-top:10px;
+}
+
+.admin-row-actions{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050911;
+    border-top:1px solid #1c283a;
+    padding:40px 0;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+footer p{
+    color:#748196;
+    margin-top:8px;
+}
+
+footer a{
+    color:#00d9ff;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero-grid,
+    .vision,
+    .dashboard{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .members,
+    .projects{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:70px 0;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .cards,
+    .members,
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .nav-actions .btn{
+        padding:9px 10px;
+        font-size:12px;
+    }
+
+    .footer-content{
+        flex-direction:column;
+    }
+
+}
+
+/* ================= NOTIFICATION ================= */
+
+.toast{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#00d9ff;
+    color:#031018;
+    padding:13px 20px;
+    border-radius:10px;
+    font-weight:700;
+    z-index:9999;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#accueil" class="logo">
+JS <span>LENGE</span> TECH
+</a>
+
+<nav class="menu">
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#equipe">Équipe</a>
+<a href="#projets">Projets</a>
+</nav>
+
+<div class="nav-actions">
+
+<button class="btn dark-btn" onclick="showPage('login')">
+Connexion
+</button>
+
+<button class="btn primary" onclick="showPage('register')">
+Rejoindre
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- ================= ACCUEIL ================= -->
+
+<main id="accueil">
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+🌍 ÉQUIPE INTERNATIONALE • TECHNOLOGIE • INNOVATION
+</div>
+
+<h1>
+Construisons
+<span>la technologie</span>
+ensemble.
+</h1>
+
+<p>
+Salut l'équipe 👋, moi c'est Mr Justin Lenge,
+de nationalité congolaise, depuis la République
+démocratique du Congo.
+
+<br><br>
+
+Le but de notre équipe est de réunir des personnes
+intéressées par la technologie afin de partager nos
+idées, créer des applications, développer des solutions
+d'intelligence artificielle et construire ensemble
+des projets technologiques.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn primary" onclick="showPage('register')">
+🚀 Rejoindre l'équipe
+</button>
+
+<a href="#projet" class="btn dark-btn">
+Découvrir notre vision
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<h3>
+🤝 Notre mission
+</h3>
+
+<p>
+Créer une communauté internationale où chaque membre
+peut proposer ses idées, partager ses compétences et
+participer à la création de projets technologiques.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong id="memberStat">1</strong>
+<small>Membres</small>
+</div>
+
+<div class="stat">
+<strong>500</strong>
+<small>Maximum</small>
+</div>
+
+<div class="stat">
+<strong>5+</strong>
+<small>Pays ciblés</small>
+</div>
+
+</div>
+
+<br>
+
+<p>
+🇨🇩 RDC • 🇫🇷 France • 🇨🇳 Chine
+• 🇨🇦 Canada • 🇺🇸 USA
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>NOTRE OBJECTIF</small>
+
+<h2>
+Créons <span>les idées de demain.</span>
+</h2>
+
+<p>
+Les services définitifs seront choisis avec l'équipe.
+Nous voulons construire ensemble selon les compétences
+et les idées de nos membres.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🤖</div>
+<h3>Intelligence artificielle</h3>
+<p>
+Créer et explorer des solutions utilisant
+l'intelligence artificielle.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">📱</div>
+<h3>Applications</h3>
+<p>
+Imaginer et développer des applications
+utiles pour différents besoins.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>Technologie web</h3>
+<p>
+Créer des plateformes et services web modernes.
+</p>
+</div>
+
+
+<div class="card">
+<div class="icon">💡</div>
+<h3>Nouvelles idées</h3>
+<p>
+Chaque membre peut proposer une idée
+et participer à son développement.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VISION ================= -->
+
+<section id="projet" class="dark-section">
+
+<div class="container vision">
+
+<div>
+
+<small class="badge">NOTRE VISION</small>
+
+<h2>
+Une idée.
+<span>Une équipe.</span>
+Un projet.
+</h2>
+
+<p>
+Nous ne voulons pas simplement créer un site.
+Nous voulons construire progressivement une véritable
+équipe internationale.
+</p>
+
+<p>
+Chaque membre apporte ses compétences et ses idées.
+Lorsque nous commencerons à développer des projets
+réels, les modalités de collaboration et de rémunération
+seront discutées avec l'équipe.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<strong>01</strong>
+
+<div>
+<h3>Rejoindre</h3>
+<p>
+Créer son profil et présenter ses compétences.
+</p>
+</div>
+
+</div>
+
+
+<div class="step">
+
+<strong>02</strong>
+
+<div>
+<h3>Partager</h3>
+<p>
+Proposer des idées et échanger avec l'équipe.
+</p>
+</div>
+
+</div>
+
+
+<div class="step">
+
+<strong>03</strong>
+
+<div>
+<h3>Construire</h3>
+<p>
+Travailler ensemble sur les meilleurs projets.
+</p>
+</div>
+
+</div>
+
+
+<div class="step">
+
+<strong>04</strong>
+
+<div>
+<h3>Évoluer</h3>
+<p>
+Développer l'équipe et rechercher des opportunités.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EQUIPE ================= -->
+
+<section id="equipe">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>COMMUNAUTÉ</small>
+
+<h2>
+Notre <span>équipe.</span>
+</h2>
+
+<p>
+Nous voulons limiter la communauté à 500 membres
+afin de garder une équipe organisée.
+</p>
+
+</div>
+
+<div class="member-count">
+Membres : <strong id="memberCount">1</strong> / 500
+</div>
+
+<div class="members" id="publicMembers"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJETS ================= -->
+
+<section id="projets" class="dark-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>PROJETS</small>
+
+<h2>
+Nos futures <span>créations.</span>
+</h2>
+
+<p>
+Les projets seront proposés et développés
+progressivement avec les membres.
+</p>
+
+</div>
+
+<div class="projects" id="publicProjects">
+
+<div class="project">
+
+<div class="icon">🤖</div>
+
+<h3>Projet IA</h3>
+
+<p>
+Projet à définir avec l'équipe.
+L'objectif sera de créer une solution
+utilisant l'intelligence artificielle.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<div class="icon">📱</div>
+
+<h3>Application mobile</h3>
+
+<p>
+Une application pourra être imaginée
+à partir des idées des membres.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<div class="icon">🌍</div>
+
+<h3>Projet international</h3>
+
+<p>
+Connecter les compétences de différents
+pays autour d'un même projet.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= JOIN ================= -->
+
+<section class="join">
+
+<div class="container">
+
+<h2>
+Tu veux construire avec nous ?
+</h2>
+
+<p>
+Nous recherchons des personnes motivées,
+créatives et intéressées par la technologie,
+l'IA, le développement, le design et d'autres domaines.
+</p>
+
+<button class="btn primary" onclick="showPage('register')">
+📝 Demander à rejoindre l'équipe
+</button>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= PAGES APPLICATION ================= -->
+
+<section id="appArea" class="app hidden">
+
+<div class="container">
+
+<div id="pageLogin" class="form-box hidden">
+
+<h2>🔐 Connexion</h2>
+
+<p style="color:#95a2b5">
+Connecte-toi à ton espace.
+</p>
+
+<label>Email</label>
+<input id="loginEmail" type="email" placeholder="ton@email.com">
+
+<label>Mot de passe</label>
+<input id="loginPassword" type="password" placeholder="Mot de passe">
+
+<button class="btn primary" onclick="login()">
+Se connecter
+</button>
+
+<p style="margin-top:15px;color:#8f9bad">
+Pas encore membre ?
+<a href="#" onclick="showPage('register')" style="color:#00d9ff">
+Créer un compte
+</a>
+</p>
+
+</div>
+
+
+<div id="pageRegister" class="form-box hidden">
+
+<h2>📝 Rejoindre JS LENGE TECH SERVICES</h2>
+
+<p style="color:#95a2b5">
+Ta demande sera examinée par l'administration.
+</p>
+
+<label>Nom complet</label>
+<input id="regName" placeholder="Ex: Jean Dupont">
+
+<label>Email</label>
+<input id="regEmail" type="email" placeholder="ton@email.com">
+
+<label>Pays</label>
+
+<select id="regCountry">
+
+<option value="">Choisir ton pays</option>
+<option>République démocratique du Congo</option>
+<option>France</option>
+<option>Chine</option>
+<option>Canada</option>
+<option>États-Unis</option>
+<option>Autre</option>
+
+</select>
+
+<label>Compétence</label>
+
+<input
+id="regSkill"
+placeholder="Ex: développeur, designer, IA..."
+>
+
+<label>Mot de passe</label>
+
+<input
+id="regPassword"
+type="password"
+placeholder="Créer un mot de passe"
+>
+
+<label>Présentation</label>
+
+<textarea
+id="regBio"
+placeholder="Présente-toi et explique pourquoi tu veux rejoindre l'équipe..."
+></textarea>
+
+<label>Photo de profil</label>
+
+<input
+id="regPhoto"
+type="file"
+accept="image/*"
+>
+
+<button class="btn primary" onclick="register()">
+Envoyer ma demande
+</button>
+
+</div>
+
+
+<!-- ================= MEMBER DASHBOARD ================= -->
+
+<div id="memberDashboard" class="dashboard hidden">
+
+<aside class="sidebar">
+
+<button class="btn dark-btn" onclick="memberTab('profile')">
+👤 Mon profil
+</button>
+
+<button class="btn dark-btn" onclick="memberTab('members')">
+👥 Membres
+</button>
+
+<button class="btn dark-btn" onclick="memberTab('ideas')">
+💡 Proposer une idée
+</button>
+
+<button class="btn dark-btn" onclick="memberTab('messages')">
+💬 Discussions
+</button>
+
+<button class="btn dark-btn" onclick="memberTab('projects')">
+🚀 Projets
+</button>
+
+<button class="btn dark-btn" onclick="logout()">
+🚪 Déconnexion
+</button>
+
+</aside>
+
+
+<div class="content-box">
+
+<div id="tabProfile"></div>
+
+<div id="tabMembers" class="hidden"></div>
+
+<div id="tabIdeas" class="hidden">
+
+<h2>💡 Proposer une idée</h2>
+
+<label>Titre de l'idée</label>
+
+<input id="ideaTitle" placeholder="Ex: Application IA">
+
+<label>Description</label>
+
+<textarea
+id="ideaText"
+placeholder="Explique ton idée..."
+></textarea>
+
+<label>Photo</label>
+
+<input id="ideaPhoto" type="file" accept="image/*">
+
+<label>Lien éventuel</label>
+
+<input
+id="ideaLink"
+placeholder="https://..."
+>
+
+<button class="btn primary" onclick="submitIdea()">
+Envoyer l'idée
+</button>
+
+<p style="color:#8491a4;margin-top:12px">
+Les liens et contenus proposés peuvent être soumis
+à validation par l'administration.
+</p>
+
+</div>
+
+
+<div id="tabMessages" class="hidden">
+
+<h2>💬 Discussions</h2>
+
+<div id="messageList"></div>
+
+<label>Message</label>
+
+<textarea
+id="newMessage"
+placeholder="Écris ton message..."
+></textarea>
+
+<button class="btn primary" onclick="sendMessage()">
+Envoyer
+</button>
+
+</div>
+
+
+<div id="tabProjects" class="hidden">
+
+<h2>🚀 Projets</h2>
+
+<div id="memberProjectList"></div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= ADMIN ================= -->
+
+<div id="adminDashboard" class="content-box admin hidden">
+
+<h2>🔐 Administration</h2>
+
+<p style="color:#a7b0bf">
+Gestion de JS LENGE TECH SERVICES.
+</p>
+
+<hr style="margin:20px 0;border-color:#29364a">
+
+<h3>👥 Demandes et membres</h3>
+
+<div id="adminMembers"></div>
+
+<hr style="margin:30px 0;border-color:#29364a">
+
+<h3>💡 Idées proposées</h3>
+
+<div id="adminIdeas"></div>
+
+<hr style="margin:30px 0;border-color:#29364a">
+
+<h3>💬 Messages</h3>
+
+<div id="adminMessages"></div>
+
+<button
+class="btn danger"
+onclick="logout()"
+style="margin-top:25px"
+>
+🚪 Quitter l'administration
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container footer-content">
+
+<div>
+
+<div class="logo">
+JS <span>LENGE</span> TECH SERVICES
+</div>
+
+<p>
+Technologie • IA • Innovation • Collaboration
+</p>
+
+</div>
+
+<div>
+
+<p>
+Contact WhatsApp
+</p>
+
+<a
+href="https://wa.me/243998505243"
+target="_blank"
+>
+📱 +243 998 505 243
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   JS LENGE TECH SERVICES
+   VERSION DEMO LOCALE
+===================================================== */
+
+
+/* ================= DONNÉES ================= */
+
+const ADMIN_EMAIL = "admin@jslenge.local";
+const ADMIN_PASSWORD = "Admin1234";
+
+const MAX_MEMBERS = 500;
+
+
+/* ================= STORAGE ================= */
+
+function getMembers(){
+
+    return JSON.parse(
+        localStorage.getItem("jslenge_members") || "[]"
+    );
+
+}
+
+function saveMembers(members){
+
+    localStorage.setItem(
+        "jslenge_members",
+        JSON.stringify(members)
+    );
+
+}
+
+
+function getIdeas(){
+
+    return JSON.parse(
+        localStorage.getItem("jslenge_ideas") || "[]"
+    );
+
+}
+
+function saveIdeas(ideas){
+
+    localStorage.setItem(
+        "jslenge_ideas",
+        JSON.stringify(ideas)
+    );
+
+}
+
+
+function getMessages(){
+
+    return JSON.parse(
+        localStorage.getItem("jslenge_messages") || "[]"
+    );
+
+}
+
+function saveMessages(messages){
+
+    localStorage.setItem(
+        "jslenge_messages",
+        JSON.stringify(messages)
+    );
+
+}
+
+
+function getProjects(){
+
+    return JSON.parse(
+        localStorage.getItem("jslenge_projects") || "[]"
+    );
+
+}
+
+function saveProjects(projects){
+
+    localStorage.setItem(
+        "jslenge_projects",
+        JSON.stringify(projects)
+    );
+
+}
+
+
+/* ================= ADMIN INITIAL ================= */
+
+function init(){
+
+    let members = getMembers();
+
+    if(
+        !members.some(
+            m => m.email === "justin@jslenge.local"
+        )
+    ){
+
+        members.push({
+
+            id:Date.now(),
+
+            name:"Mr Justin Lenge",
+
+            email:"justin@jslenge.local",
+
+            country:"République démocratique du Congo",
+
+            skill:"Fondateur • Technologie & Innovation",
+
+            bio:"Fondateur de JS LENGE TECH SERVICES.",
+
+            photo:"",
+
+            status:"approved",
+
+            date:new Date().toLocaleDateString("fr-FR")
+
+        });
+
+        saveMembers(members);
+
+    }
+
+    renderMembers();
+    updateStats();
+
+}
+
+
+init();
+
+
+/* ================= TOAST ================= */
+
+function toast(message){
+
+    const old =
+        document.querySelector(".toast");
+
+    if(old) old.remove();
+
+    const box =
+        document.createElement("div");
+
+    box.className="toast";
+
+    box.textContent=message;
+
+    document.body.appendChild(box);
+
+    setTimeout(
+        () => box.remove(),
+        3000
+    );
+
+}
+
+
+/* ================= NAVIGATION ================= */
+
+function showPage(page){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+    const app =
+        document.getElementById("appArea");
+
+    app.classList.remove("hidden");
+
+    document
+        .getElementById("pageLogin")
+        .classList.add("hidden");
+
+    document
+        .getElementById("pageRegister")
+        .classList.add("hidden");
+
+    document
+        .getElementById("memberDashboard")
+        .classList.add("hidden");
+
+    document
+        .getElementById("adminDashboard")
+        .classList.add("hidden");
+
+
+    if(page==="login"){
+
+        document
+            .getElementById("pageLogin")
+            .classList.remove("hidden");
+
+    }
+
+
+    if(page==="register"){
+
+        document
+            .getElementById("pageRegister")
+            .classList.remove("hidden");
+
+    }
+
+}
+
+
+/* ================= IMAGE ================= */
+
+function readImage(file){
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            if(!file){
+
+                resolve("");
+
+                return;
+
+            }
+
+            const reader =
+                new FileReader();
+
+            reader.onload =
+                e => resolve(e.target.result);
+
+            reader.onerror =
+                reject;
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+}
+
+
+/* ================= INSCRIPTION ================= */
+
+async function register(){
+
+    const name =
+        document.getElementById("regName").value.trim();
+
+    const email =
+        document.getElementById("regEmail").value.trim().toLowerCase();
+
+    const country =
+        document.getElementById("regCountry").value;
+
+    const skill =
+        document.getElementById("regSkill").value.trim();
+
+    const password =
+        document.getElementById("regPassword").value;
+
+    const bio =
+        document.getElementById("regBio").value.trim();
+
+    const photoFile =
+        document.getElementById("regPhoto").files[0];
+
+
+    if(
+        !name ||
+        !email ||
+        !country ||
+        !skill ||
+        !password
+    ){
+
+        toast("Veuillez remplir tous les champs obligatoires.");
+
+        return;
+
+    }
+
+
+    let members=getMembers();
+
+
+    if(members.length>=MAX_MEMBERS){
+
+        toast("La limite de 500 membres est atteinte.");
+
+        return;
+
+    }
+
+
+    if(
+        members.some(
+            m=>m.email===email
+        )
+    ){
+
+        toast("Cet email existe déjà.");
+
+        return;
+
+    }
+
+
+    const photo =
+        await readImage(photoFile);
+
+
+    members.push({
+
+        id:Date.now(),
+
+        name,
+
+        email,
+
+        country,
+
+        skill,
+
+        password,
+
+        bio,
+
+        photo,
+
+        status:"pending",
+
+        date:new Date().toLocaleDateString("fr-FR")
+
+    });
+
+
+    saveMembers(members);
+
+    toast(
+        "Demande envoyée. L'administration doit maintenant l'accepter."
+    );
+
+
+    document
+        .getElementById("regName")
+        .value="";
+
+    document
+        .getElementById("regEmail")
+        .value="";
+
+    document
+        .getElementById("regCountry")
+        .value="";
+
+    document
+        .getElementById("regSkill")
+        .value="";
+
+    document
+        .getElementById("regPassword")
+        .value="";
+
+    document
+        .getElementById("regBio")
+        .value="";
+
+    document
+        .getElementById("regPhoto")
+        .value="";
+
+
+    setTimeout(
+        ()=>showPage("login"),
+        1200
+    );
+
+}
+
+
+/* ================= CONNEXION ================= */
+
+function login(){
+
+    const email =
+        document
+        .getElementById("loginEmail")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const password =
+        document
+        .getElementById("loginPassword")
+        .value;
+
+
+    /* ADMIN */
+
+    if(
+        email===ADMIN_EMAIL &&
+        password===ADMIN_PASSWORD
+    ){
+
+        localStorage.setItem(
+            "jslenge_session",
+            "ADMIN"
+        );
+
+        openAdmin();
+
+        return;
+
+    }
+
+
+    const members=getMembers();
+
+    const member =
+        members.find(
+            m =>
+            m.email===email &&
+            m.password===password
+        );
+
+
+    if(!member){
+
+        toast("Email ou mot de passe incorrect.");
+
+        return;
+
+    }
+
+
+    if(member.status!=="approved"){
+
+        toast(
+            "Ton compte attend encore l'approbation de l'administration."
+        );
+
+        return;
+
+    }
+
+
+    localStorage.setItem(
+        "jslenge_session",
+        String(member.id)
+    );
+
+
+    openMember(member);
+
+}
+
+
+/* ================= MEMBRE ================= */
+
+function openMember(member){
+
+    document
+        .getElementById("pageLogin")
+        .classList.add("hidden");
+
+    document
+        .getElementById("pageRegister")
+        .classList.add("hidden");
+
+    document
+        .getElementById("adminDashboard")
+        .classList.add("hidden");
+
+    document
+        .getElementById("memberDashboard")
+        .classList.remove("hidden");
+
+
+    memberTab("profile");
+
+    toast("Bienvenue "+member.name+" !");
+
+}
+
+
+/* ================= TABS ================= */
+
+function memberTab(tab){
+
+    const tabs=[
+        "tabProfile",
+        "tabMembers",
+        "tabIdeas",
+        "tabMessages",
+        "tabProjects"
+    ];
+
+
+    tabs.forEach(
+        id =>
+        document
+        .getElementById(id)
+        .classList.add("hidden")
+    );
+
+
+    if(tab==="profile"){
+
+        document
+        .getElementById("tabProfile")
+        .classList.remove("hidden");
+
+        renderProfile();
+
+    }
+
+
+    if(tab==="members"){
+
+        document
+        .getElementById("tabMembers")
+        .classList.remove("hidden");
+
+        renderPrivateMembers();
+
+    }
+
+
+    if(tab==="ideas"){
+
+        document
+        .getElementById("tabIdeas")
+        .classList.remove("hidden");
+
+    }
+
+
+    if(tab==="messages"){
+
+        document
+        .getElementById("tabMessages")
+        .classList.remove("hidden");
+
+        renderMessages();
+
+    }
+
+
+    if(tab==="projects"){
+
+        document
+        .getElementById("tabProjects")
+        .classList.remove("hidden");
+
+        renderMemberProjects();
+
+    }
+
+}
+
+
+/* ================= SESSION MEMBER ================= */
+
+function currentMember(){
+
+    const session =
+        localStorage.getItem("jslenge_session");
+
+    if(!session || session==="ADMIN")
+        return null;
+
+    return getMembers().find(
+        m=>String(m.id)===session
+    );
+
+}
+
+
+/* ================= PROFILE ================= */
+
+function renderProfile(){
+
+    const member=currentMember();
+
+    if(!member)return;
+
+
+    const avatar =
+        member.photo
+        ?
+        `<img src="${member.photo}">`
+        :
+        member.name
+            .substring(0,2)
+            .toUpperCase();
+
+
+    document
+    .getElementById("tabProfile")
+    .innerHTML=`
+
+        <div class="profile-head">
+
+            <div class="avatar">
+                ${avatar}
+            </div>
+
+            <div>
+
+                <h2>${escapeHTML(member.name)}</h2>
+
+                <p style="color:#00d9ff">
+                    ${escapeHTML(member.country)}
+                </p>
+
+                <p style="color:#8e9bae">
+                    ${escapeHTML(member.skill)}
+                </p>
+
+            </div>
+
+        </div>
+
+        <h3>Présentation</h3>
+
+        <p style="color:#9aa7ba;margin-top:10px">
+            ${escapeHTML(member.bio || "Aucune présentation.")}
+        </p>
+
+        <br>
+
+        <p style="color:#718096">
+            Membre depuis : ${member.date}
+        </p>
+
+    `;
+
+}
+
+
+/* ================= MEMBRES ================= */
+
+function renderMembers(){
+
+    const members =
+        getMembers()
+        .filter(
+            m=>m.status==="approved"
+        );
+
+
+    const box =
+        document.getElementById("publicMembers");
+
+
+    box.innerHTML="";
+
+
+    members.forEach(member=>{
+
+        const avatar =
+            member.photo
+            ?
+            `<img src="${member.photo}">`
+            :
+            member.name
+                .substring(0,2)
+                .toUpperCase();
+
+
+        box.innerHTML += `
+
+        <div class="member">
+
+            <div class="avatar">
+                ${avatar}
+            </div>
+
+            <h3>
+                ${escapeHTML(member.name)}
+            </h3>
+
+            <div class="country">
+                🌍 ${escapeHTML(member.country)}
+            </div>
+
+            <div class="skill">
+                ${escapeHTML(member.skill)}
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+
+    updateStats();
+
+}
+
+
+function renderPrivateMembers(){
+
+    const members =
+        getMembers()
+        .filter(
+            m=>m.status==="approved"
+        );
+
+
+    document
+    .getElementById("tabMembers")
+    .innerHTML=`
+
+        <h2>👥 Membres de l'équipe</h2>
+
+        <p style="color:#8f9bad;margin:10px 0 20px">
+            ${members.length} / 500 membres
+        </p>
+
+        <div class="members">
+
+        ${
+            members.map(member=>`
+
+            <div class="member">
+
+                <div class="avatar">
+                    ${
+                        member.photo
+                        ?
+                        `<img src="${member.photo}">`
+                        :
+                        member.name.substring(0,2).toUpperCase()
+                    }
+                </div>
+
+                <h3>
+                    ${escapeHTML(member.name)}
+                </h3>
+
+                <div class="country">
+                    ${escapeHTML(member.country)}
+                </div>
+
+                <div class="skill">
+                    ${escapeHTML(member.skill)}
+                </div>
+
+            </div>
+
+            `).join("")
+        }
+
+        </div>
+
+    `;
+
+}
+
+
+/* ================= IDÉE ================= */
+
+async function submitIdea(){
+
+    const member=currentMember();
+
+    if(!member){
+
+        toast("Connecte-toi d'abord.");
+
+        return;
+
+    }
+
+
+    const title =
+        document.getElementById("ideaTitle")
+        .value.trim();
+
+    const text =
+        document.getElementById("ideaText")
+        .value.trim();
+
+    const link =
+        document.getElementById("ideaLink")
+        .value.trim();
+
+    const photoFile =
+        document.getElementById("ideaPhoto")
+        .files[0];
+
+
+    if(!title || !text){
+
+        toast("Ajoute un titre et une description.");
+
+        return;
+
+    }
+
+
+    const photo =
+        await readImage(photoFile);
+
+
+    const ideas=getIdeas();
+
+
+    ideas.push({
+
+        id:Date.now(),
+
+        authorId:member.id,
+
+        author:member.name,
+
+        title,
+
+        text,
+
+        link,
+
+        photo,
+
+        status:"pending",
+
+        date:new Date().toLocaleDateString("fr-FR")
+
+    });
+
+
+    saveIdeas(ideas);
+
+
+    document.getElementById("ideaTitle").value="";
+    document.getElementById("ideaText").value="";
+    document.getElementById("ideaLink").value="";
+    document.getElementById("ideaPhoto").value="";
+
+
+    toast(
+        "Idée envoyée à l'administration pour validation."
+    );
+
+}
+
+
+/* ================= MESSAGES ================= */
+
+function sendMessage(){
+
+    const member=currentMember();
+
+    if(!member)return;
+
+
+    const text =
+        document
+        .getElementById("newMessage")
+        .value
+        .trim();
+
+
+    if(!text){
+
+        toast("Écris un message.");
+
+        return;
+
+    }
+
+
+    const messages=getMessages();
+
+
+    messages.push({
+
+        id:Date.now(),
+
+        authorId:member.id,
+
+        author:member.name,
+
+        text,
+
+        date:new Date().toLocaleString("fr-FR")
+
+    });
+
+
+    saveMessages(messages);
+
+
+    document
+        .getElementById("newMessage")
+        .value="";
+
+
+    renderMessages();
+
+}
+
+
+function renderMessages(){
+
+    const messages=getMessages();
+
+
+    const box=
+        document.getElementById("messageList");
+
+
+    if(messages.length===0){
+
+        box.innerHTML=`
+            <p style="color:#8491a4">
+                Aucun message pour le moment.
+            </p>
+        `;
+
+        return;
+
+    }
+
+
+    box.innerHTML=
+        messages
+        .map(
+            m=>`
+
+            <div class="post">
+
+                <strong>
+                    ${escapeHTML(m.author)}
+                </strong>
+
+                <small style="color:#64748b">
+                    ${m.date}
+                </small>
+
+                <p>
+                    ${escapeHTML(m.text)}
+                </p>
+
+            </div>
+
+            `
+        )
+        .join("");
+
+}
+
+
+/* ================= PROJETS ================= */
+
+function renderMemberProjects(){
+
+    const projects=getProjects();
+
+
+    let html="";
+
+
+    if(projects.length===0){
+
+        html+=`
+
+            <div class="project">
+
+                <h3>🤖 Projet IA</h3>
+
+                <p>
+                    Les premiers projets seront définis
+                    avec l'équipe.
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    projects.forEach(
+        p=>{
+
+            html+=`
+
+                <div class="project">
+
+                    <h3>
+                        ${escapeHTML(p.title)}
+                    </h3>
+
+                    <p>
+                        ${escapeHTML(p.description)}
+                    </p>
+
+                </div>
+
+            `;
+
+        }
+    );
+
+
+    document
+    .getElementById("memberProjectList")
+    .innerHTML=html;
+
+}
+
+
+/* ================= ADMIN ================= */
+
+function openAdmin(){
+
+    document
+    .getElementById("appArea")
+    .classList.remove("hidden");
+
+    document
+    .getElementById("pageLogin")
+    .classList.add("hidden");
+
+    document
+    .getElementById("pageRegister")
+    .classList.add("hidden");
+
+    document
+    .getElementById("memberDashboard")
+    .classList.add("hidden");
+
+    document
+    .getElementById("adminDashboard")
+    .classList.remove("hidden");
+
+
+    renderAdmin();
+
+    toast("Administration ouverte.");
+
+}
+
+
+function renderAdmin(){
+
+    renderAdminMembers();
+    renderAdminIdeas();
+    renderAdminMessages();
+
+}
+
+
+/* ================= ADMIN MEMBERS ================= */
+
+function renderAdminMembers(){
+
+    const members=getMembers();
+
+
+    const box=
+        document.getElementById("adminMembers");
+
+
+    box.innerHTML="";
+
+
+    if(members.length===0){
+
+        box.innerHTML=
+        `<p style="color:#8996aa">
+        Aucun membre.
+        </p>`;
+
+        return;
+
+    }
+
+
+    members.forEach(member=>{
+
+        const statusText =
+            member.status==="approved"
+            ?
+            "✅ Accepté"
+            :
+            "⏳ En attente";
+
+
+        box.innerHTML += `
+
+            <div class="admin-row">
+
+                <strong>
+                    ${escapeHTML(member.name)}
+                </strong>
+
+                <p style="color:#8d99aa">
+                    ${escapeHTML(member.email)}
+                    <br>
+                    🌍 ${escapeHTML(member.country)}
+                    <br>
+                    💻 ${escapeHTML(member.skill)}
+                    <br>
+                    Statut : ${statusText}
+                </p>
+
+                <div class="admin-row-actions">
+
+                    ${
+                        member.status!=="approved"
+                        ?
+                        `<button
+                            class="btn success"
+                            onclick="approveMember(${member.id})"
+                        >
+                            ✅ Accepter
+                        </button>`
+                        :
+                        ""
+                    }
+
+                    <button
+                        class="btn danger"
+                        onclick="deleteMember(${member.id})"
+                    >
+                        🗑️ Supprimer
+                    </button>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ================= APPROUVER ================= */
+
+function approveMember(id){
+
+    const members=getMembers();
+
+
+    const member =
+        members.find(
+            m=>m.id===id
+        );
+
+
+    if(member){
+
+        member.status="approved";
+
+        saveMembers(members);
+
+        renderAdmin();
+
+        renderMembers();
+
+        toast(
+            member.name+" a été accepté."
+        );
+
+    }
+
+}
+
+
+/* ================= SUPPRIMER MEMBRE ================= */
+
+function deleteMember(id){
+
+    if(
+        !confirm(
+            "Supprimer définitivement ce membre ?"
+        )
+    ){
+
+        return;
+
+    }
+
+
+    let members=getMembers();
+
+
+    members =
+        members.filter(
+            m=>m.id!==id
+        );
+
+
+    saveMembers(members);
+
+
+    renderAdmin();
+
+    renderMembers();
+
+    toast("Membre supprimé.");
+
+}
+
+
+/* ================= ADMIN IDÉES ================= */
+
+function renderAdminIdeas(){
+
+    const ideas=getIdeas();
+
+
+    const box=
+        document.getElementById("adminIdeas");
+
+
+    if(ideas.length===0){
+
+        box.innerHTML=
+        `<p style="color:#8996aa">
+        Aucune idée proposée.
+        </p>`;
+
+        return;
+
+    }
+
+
+    box.innerHTML="";
+
+
+    ideas.forEach(idea=>{
+
+        box.innerHTML+=`
+
+        <div class="admin-row">
+
+            <strong>
+                ${escapeHTML(idea.title)}
+            </strong>
+
+            <p>
+                ${escapeHTML(idea.text)}
+            </p>
+
+            <small style="color:#8190a4">
+                Par ${escapeHTML(idea.author)}
+                • ${idea.date}
+            </small>
+
+            ${
+                idea.link
+                ?
+                `<p>
+                    🔗 ${escapeHTML(idea.link)}
+                </p>`
+                :
+                ""
+            }
+
+            ${
+                idea.photo
+                ?
+                `<img
+                    src="${idea.photo}"
+                    style="max-width:200px;border-radius:10px;margin-top:10px"
+                >`
+                :
+                ""
+            }
+
+            <div class="admin-row-actions">
+
+                <button
+                    class="btn success"
+                    onclick="approveIdea(${idea.id})"
+                >
+                    ✅ Accepter
+                </button>
+
+                <button
+                    class="btn danger"
+                    onclick="deleteIdea(${idea.id})"
+                >
+                    🗑️ Supprimer
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ================= APPROUVER IDÉE ================= */
+
+function approveIdea(id){
+
+    const ideas=getIdeas();
+
+
+    const idea =
+        ideas.find(
+            i=>i.id===id
+        );
+
+
+    if(idea){
+
+        idea.status="approved";
+
+        saveIdeas(ideas);
+
+        renderAdmin();
+
+        toast("Idée acceptée.");
+
+    }
+
+}
+
+
+/* ================= SUPPRIMER IDÉE ================= */
+
+function deleteIdea(id){
+
+    if(
+        !confirm("Supprimer cette idée ?")
+    )return;
+
+
+    const ideas=
+        getIdeas()
+        .filter(
+            i=>i.id!==id
+        );
+
+
+    saveIdeas(ideas);
+
+    renderAdmin();
+
+    toast("Idée supprimée.");
+
+}
+
+
+/* ================= ADMIN MESSAGES ================= */
+
+function renderAdminMessages(){
+
+    const messages=getMessages();
+
+
+    const box=
+        document.getElementById("adminMessages");
+
+
+    if(messages.length===0){
+
+        box.innerHTML=
+        `<p style="color:#8996aa">
+        Aucun message.
+        </p>`;
+
+        return;
+
+    }
+
+
+    box.innerHTML="";
+
+
+    messages.forEach(m=>{
+
+        box.innerHTML+=`
+
+        <div class="admin-row">
+
+            <strong>
+                ${escapeHTML(m.author)}
+            </strong>
+
+            <p>
+                ${escapeHTML(m.text)}
+            </p>
+
+            <small style="color:#718096">
+                ${m.date}
+            </small>
+
+            <br><br>
+
+            <button
+                class="btn danger"
+                onclick="deleteMessage(${m.id})"
+            >
+                🗑️ Effacer le message
+            </button>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ================= SUPPRIMER MESSAGE ================= */
+
+function deleteMessage(id){
+
+    if(
+        !confirm("Effacer ce message ?")
+    )return;
+
+
+    const messages=
+        getMessages()
+        .filter(
+            m=>m.id!==id
+        );
+
+
+    saveMessages(messages);
+
+    renderAdmin();
+
+    toast("Message supprimé.");
+
+}
+
+
+/* ================= LOGOUT ================= */
+
+function logout(){
+
+    localStorage.removeItem(
+        "jslenge_session"
+    );
+
+    document
+        .getElementById("appArea")
+        .classList.add("hidden");
+
+    window.scrollTo({
+        top:0
+    });
+
+    toast("Déconnexion effectuée.");
+
+}
+
+
+/* ================= STATS ================= */
+
+function updateStats(){
+
+    const count =
+        getMembers()
+        .filter(
+            m=>m.status==="approved"
+        )
+        .length;
+
+
+    const memberCount =
+        document.getElementById("memberCount");
+
+    const memberStat =
+        document.getElementById("memberStat");
+
+
+    if(memberCount)
+        memberCount.textContent=count;
+
+    if(memberStat)
+        memberStat.textContent=count;
+
+}
+
+
+/* ================= SÉCURITÉ AFFICHAGE ================= */
+
+function escapeHTML(value){
+
+    return String(value)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+
+}
+
+
+/* ================= ADMIN RACCOURCI ================= */
+
+/*
+   Pour tester l'administration :
+
+   Email :
+   admin@jslenge.local
+
+   Mot de passe :
+   Admin1234
+
+   IMPORTANT :
+   Ces identifiants sont uniquement pour cette
+   démonstration locale. Ils ne doivent PAS être
+   utilisés pour une vraie plateforme en production.
+*/
+
+
+/* ================= RETOUR APRÈS RECHARGEMENT ================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        const session =
+            localStorage.getItem(
+                "jslenge_session"
+            );
+
+
+        if(session==="ADMIN"){
+
+            openAdmin();
+
+            return;
+
+        }
+
+
+        if(session){
+
+            const member=currentMember();
+
+            if(member){
+
+                openMember(member);
+
+            }
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
